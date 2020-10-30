@@ -1,2 +1,2 @@
 # website-product
-Create a website with HTML and CSS
+Create a website about product marketing using HTML and CSS
