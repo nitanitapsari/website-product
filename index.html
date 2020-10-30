@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <script language="JavaScript">
+        /**
+          * Disable right-click of mouse, F12 key, and save key combinations on page
+          * By Arthur Gareginyan (arthurgareginyan@gmail.com)
+          * Modified by Nechveirst (instagram.com/nchvrst)
+          * For full source code, visit http://www.mycyberuniverse.com
+          */
+        window.onload = function() {
+          document.addEventListener("contextmenu", function(e){
+            e.preventDefault();
+          }, false);
+          document.addEventListener("keydown", function(e) {
+          //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);                                                       
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+              disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          }, false);
+          function disabledEvent(e){
+            if (e.stopPropagation){
+              e.stopPropagation();
+            } else if (window.event){
+              window.event.cancelBubble = true;
+            }
+            e.preventDefault();
+            return false;
+          }
+        };
+      </script>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pustoc</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.mySlides {display:none;}
+
+.slideshow-container{
+    max-width:100px;
+    position : relative ;
+    margin : auto ;
+}
+
+.fade{
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name; fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyFrames fade{
+from {opacity:  0.4}
+to {opacity: 1}
+}
+
+@keyframes fade{
+from{opacity: 0.4}
+to {opacity:1}
+}
+</style>
+
+  <style> /* This style is for scrollbar */
+      /* width */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px white; 
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: white; 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #201b1b; 
+      }
+  </style>
+
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto" size="6">Pustoc</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!--<a href="#intro"><img src="img/logo1.png" alt="" title="" class="scrollto" width="75"/></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Beranda</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#facts">Data</a></li>
+          <li><a href="#portfolio">Dokumentasi</a></li>
+          <li><a href="#testimonials">Testimoni</a></li>
+          <li><a href="#team">Tim</a></li>
+          <!--
+          <li class="menu-has-children"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          -->
+          <li><a href="#kritik_saran">Kritik & Saran</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+          
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="img/intro-carousel/1.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                  <a href="#intro"><img src="img/logo1.png" alt="" title="" class="scrollto" width="400"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="img/intro-carousel/2.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                  <a href="#intro"><img src="img/logo1.png" alt="" title="" class="scrollto" width="200"/>
+                <h2></h2>
+                <h2>Dirancang untuk Panen Besar !</h2>
+                <p>Merupakan startup yang dirintis oleh mahasiswa dan bergerak dibidang pelayanan produk-produk pertanian.</p>
+                <a href="#about" class="btn-get-started scrollto">Mulai</a>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  <!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      Featured Services Section
+    ============================-->
+    <!-- #featured-services -->
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Tentang Kami</h3>
+          <p>Pustoc didirikan pada tahun 2019 dengan tujuan membantu para petani keluar dari permasalahan kelangkaan dan mahalnya pupuk serta dampak pupuk kimia yang merusak tanah. Melalui produk pupuk cair, Pustoc memberikan solusi untuk penyuburan tanah yang efektif, berkelanjutan, organik dan ramah lingkungan. Dengan begitu, para petani dapat meraih panen besar yang berkualitas tinggi dan menjadi jawaban atas permasalahan pangan.</p></header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-mission.png" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Misi</a></h2>
+              <center><p>
+                  Menghasilkan pupuk dan produk pertanian lainnya yang berkualitas tinggi, Memberikan pelayanan terbaik dan solusi untuk kepuasan pelanggan.               
+              </p></center>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-plan.png" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Profil</a></h2>
+              <center><p>
+                  Pustoc adalah perusahaan penghasil produk pendukung pertanian yang membantu para petani mencapai panen besar dan berkualitas tinggi.</p></center>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-vision.png" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Visi</a></h2>
+              <center><p>
+                  Berkontribusi besar dalam bidang pertanian dan berdaya saing global dengan produk, pelayanan dan sumber daya manusia yang berkualitas tinggi.
+              </p></center>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Pelayanan</h3>
+          <p>Bagi kami, pelanggan adalah yang pertama dan yang utama. Pelayanan yang optimal dan maksimal akan kami berikan demi kepuasan pelanggan.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+            <h4 class="title"><a href="">Pembaruan Data</a></h4>
+            <p class="description">Kami akan terus memberikan berita terbaru tentang pengembangan produk kami untuk kepuasan pelanggan</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+            <h4 class="title"><a href="">Teruji Klinis</a></h4>
+            <p class="description">Produk kami telah teruji di beberapa lab, yaitu Teknik Kimia ITS, Biologi ITS, BPTP Malang, dan SUCOFINDO, dan sesuai dengan perkembangan ilmu pengetahuan pertanian saat ini</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-paper-outline"></i></div>
+            <h4 class="title"><a href="">Berizin dan Tersertifikat</a></h4>
+            <p class="description">Produk kami sedang dalam pengajuan izin ke lembaga terkait untuk memastikan standar dan kualitas mutu produk kami</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+            <h4 class="title"><a href="">Respon Cepat</a></h4>
+            <p class="description">Kami akan selalu memprioritaskan kebutuhan dan keluhan pelanggan demi kemajuan bisnis dan kepuasan pelanggan</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-barcode-outline"></i></div>
+            <h4 class="title"><a href="">Bersaing</a></h4>
+            <p class="description">Produk kami mampu bersaing dengan produk-produk unggulan lainnya dalam hal kualitas dan mutu </p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-people-outline"></i></div>
+            <h4 class="title"><a href="">Periset Unggul</a></h4>
+            <p class="description">Produk kami didukung dan dikembangkan oleh ilmuwan-ilmuwan unggul yang sudah terjamin pengalamannya.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeIn">
+      <div class="container text-center">
+        <h3>Pesan Produk</h3>
+        <p> Pesan produk kami saat ini juga dan dapatkan berbagai keuntungan seperti pupuk kualitas tinggi, dukungan produk serta keuntungan dan manfaat-manfaat lainnya.</p>
+        <a class="cta-btn" href="#contact">Pesan</a>
+      </div>
+    </section><!-- #call-to-action -->
+
+    <!--==========================
+      Skills Section
+    ============================-->
+    <section id="skills">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Keahlian</h3>
+          <p>Meskipun usaha kami tergolong start-up, tapi kami telah memiliki keahlian-keahlian dalam mendirikan, mengembangkan dan membawa perusahaan kami menjadi yang tebaik.</p>
+        </header>
+
+        <div class="skills-content">
+
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="1000">
+              <span class="skill">Sales & Marketing <i class="val">80%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Research & Development <i class="val">90%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Advance Products <i class="val">95%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Miscellaneous <i class="val">75%</i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Facts Section
+    ============================-->
+    <section id="facts"  class="wow fadeIn">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Data</h3>
+          <p>Berikut beberapa data statistik tentang perusahaan kami</p>
+        </header>
+
+        <div class="w3-content w3-display-container">
+          <center>
+          <img class="mySlides" src="img/data/1.png" style="width:100%">
+          <img class="mySlides" src="img/data/2.png" style="width:100%">
+          <img class="mySlides" src="img/data/3.png" style="width:100%">
+          <img class="mySlides" src="img/data/4.png" style="width:70%">
+          <img class="mySlides" src="img/data/5.png" style="width:100%">
+          <img class="mySlides" src="img/data/6.png" style="width:100%">
+          <img class="mySlides" src="img/data/7.png" style="width:100%">
+          </center>
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <div class="facts-img">
+          <!-- <img src="img/fact-profile.png" alt="" class="img-fluid"> -->
+        </div>
+
+        <div class="facts-img">
+            <!-- <img src="img/fact-profile.png" alt="" class="img-fluid"> -->
+          </div>
+
+      </div>
+    </section><!-- #facts -->
+
+    <!--==========================
+      Dokumentasi Section
+    ============================-->
+    <section id="portfolio"  class="section-bg" >
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Dokumentasi</h3>
+        </header>
+
+<!--        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Semua</li>
+              <li data-filter=".filter-app">Pengembangan</li>
+              <li data-filter=".filter-card">Aplikasi</li>
+              <li data-filter=".filter-web">Konsumen</li>
+            </ul>
+          </div>
+        </div>
+-->
+        <div class="row portofolio-container">
+        
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portofolio-wrap">
+              <figure>
+                <img src="img/portfolio/produk.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/produk.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+            <div class="portfolio-info">
+                <h4><a href="#">Produk Pupuk</a></h4>
+            </div>
+            </div>
+          </div>          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portofolio-wrap">
+              <figure>
+                <img src="img/portfolio/produk 2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/produk 2.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>              
+              <div class="portfolio-info">
+                <h4><a href="#">Produk Pupuk</a></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/pameran.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/pameran.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Pameran Produk di Batam</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/pameran 2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/pameran 2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Pameran Produk di Batam</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/pameran 3.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/pameran 3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Pameran Produk di Batam</a></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Lahan Milik Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/aplikasi bibit.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/aplikasi bibit.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Lahan Milik Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/padi.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/padi.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Lahan Milik Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/pepaya 2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/pepaya 2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>            
+              <div class="portfolio-info">
+                <h4><a href="#">Lahan Milik Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Proses Pengembangan Pupuk</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Proses Pengembangan Pupuk</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Proses Pengembangan Pupuk</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/penyimpanan produk.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/penyimpanan produk.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Proses Pengembangan Pupuk</a></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Diskusi dengan Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Diskusi dengan Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/penjualan.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/penjualan.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Diskusi dengan Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/diskusi konsumen.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/diskusi konsumen.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Diskusi dengan Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/diskusi konsumen 2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/diskusi konsumen 2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Diskusi dengan Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/diskusi konsumen 3.png" class="img-fluid" alt="">
+                <a href="img/portfolio/diskusi konsumen 3.png" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Diskusi dengan Konsumen</a></h4>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Terima Kasih</h3>
+          <p>Terima kasih atas kepercayaan Anda karena telah menjadi bagian dari keluarga besar Pustoc</p>
+        </header>
+
+        <div class="container">
+          <center>
+          <img src="img/clients/clien-3.png" alt="" size="200">
+        </center>
+          <!-- 
+          <img src="img/clients/client-2.png" alt="">
+          <img src="img/clients/client-3.png" alt="">
+          <img src="img/clients/client-4.png" alt="">
+          <img src="img/clients/client-5.png" alt="">
+          <img src="img/clients/client-6.png" alt="">
+          <img src="img/clients/client-7.png" alt="">
+          <img src="img/clients/client-8.png" alt="">
+          -->
+        </div>
+
+      </div>
+    </section><!-- #clients -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="testimonials" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Testimoni</h3>
+        </header>
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <img src="img//petani/diskusi konsumen 3.png" class="testimonial-img" alt="">
+            <h3>Mr Basuki</h3>
+            <h4>Wonogiri Farmer</h4>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              This fertilizer doesn't damage the soil like other chemical fertilizer
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="img//petani/penjualan.jpg" class="testimonial-img" alt="">
+            <h3>Mr Sumarno</h3>
+            <h4>Wonogiri Farmer</h4>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              The good news is that my cassava yield has increased by 66% after using PUSTOC
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="img//petani/pak sumarno.png" class="testimonial-img" alt="">
+            <h3>Mr Suharto</h3>
+            <h4>Wonogiri Farmer</h4>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              Before using PUSTOC my rice yield was only 5 tons. After using PUSTOC it rose to 8.4 tons. PUSTOC is indeed tested.
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="img//petani/pak basuki.png" class="testimonial-img" alt="">
+            <h3>Mr Larno</h3>
+            <h4>Wonogiri Farmer</h4>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              I think it's only rice that has increased yields, it turns out that my legume crop has also increased by 53%. All because    of PUSTOC.
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>          
+
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+
+
+    <!-- Video Testimoni Section -->
+    <section id="facts" class="wow fadeIn">
+        <div class="container">
+  
+          <header class="section-header">
+            <h3>Video Testimoni</h3>
+          </header>
+                
+            <div class="container">
+                <center>
+                <p>Wawancara dengan Tokoh Kelompok Tani</p>
+                  <div class='onq-youtube-player' style='width: 400px; display: block; position: relative; cursor: pointer; height:285px; overflow: hidden; margin: 20px 0;' data-id='aDbY6ARvwpw' data-width='400' data-height='285' data-ssv='false' data-spc='true' data-sta='false' data-afs='true' data-dkc='false' data-ecc='false' data-eap='false'><img src='//i.ytimg.com/vi/aDbY6ARvwpw/hqdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'><div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("https://www.onqmarketing.com.au/wp-content/plugins/onq-youtube-embed-generator/playbutton.png") no-repeat; background-size: 72px;'></div></div>
+                  <!--<iframe width="5" height="300" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                  <p>Video Pasca Panen Menggunakan Pustoc</p>
+                  <div class='onq-youtube-player' style='width: 400px; display: block; position: relative; cursor: pointer; height:285px; overflow: hidden; margin: 20px 0;' data-id='5RK8-oYJ15Y' data-width='400' data-height='285' data-ssv='false' data-spc='true' data-sta='false' data-afs='true' data-dkc='false' data-ecc='false' data-eap='false'><img src='//i.ytimg.com/vi/5RK8-oYJ15Y/hqdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'><div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("https://www.onqmarketing.com.au/wp-content/plugins/onq-youtube-embed-generator/playbutton.png") no-repeat; background-size: 72px;'></div></div>
+                  <!--<iframe width="5" height="300" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                  <p>Pengenalan Pupuk Pustoc</p>
+                  <div class='onq-youtube-player' style='width: 400px; display: block; position: relative; cursor: pointer; height:285px; overflow: hidden; margin: 20px 0;' data-id='L5FmK5LxVfk' data-width='400' data-height='285' data-ssv='false' data-spc='true' data-sta='false' data-afs='true' data-dkc='false' data-ecc='false' data-eap='false'><img src='//i.ytimg.com/vi/L5FmK5LxVfk/hqdefault.jpg' style='display: block; left: 0; margin: auto; width: 100%; height: 100%; position: absolute; right: 0;'><div style='height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("https://www.onqmarketing.com.au/wp-content/plugins/onq-youtube-embed-generator/playbutton.png") no-repeat; background-size: 72px;'></div></div>
+                </center>
+            </div>
+        </div><br><br><br>
+    </section><!-- #testimonials -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h3>Tim</h3>
+          <p>Adalah orang-orang besar yang berdiri dan memimpin dibalik perusahaan kami, Pustoc</p>
+        </div>
+
+        <div class="row">
+          
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="img/clients/team/2.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Anky Fitrian</h4>
+                  <span>Chief Executive Officer</span>
+                  <div class="social">
+                    <a href="http://www.instagram.com/anky_f" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/clients/team/8.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Yohannes Silaen</h4>
+                  <span>Chief Finance Officer</span>
+                  <div class="social">
+                    <a href="https://www.instagram.com/silaen_yohannes" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="img/clients/team/4.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Muh. Junda Azizi</h4>
+                  <span>Supply Manager</span>
+                  <div class="social">
+                    <a href="https://www.instagram.com/jundazizi" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="img/clients/team/6.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Rashida Misali</h4>
+                  <span>Public Relation</span>
+                  <div class="social">
+                    <a href="https://www.instagram.com/rashidamisali" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>         
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="member">
+                <img src="img/clients/team/3.png" class="img-fluid" alt="">
+                  <div class="member-info">
+                    <div class="member-info-content">
+                      <h4>Bagus Purnawira</h4>
+                      <span>Chief Marketing Officer</span>
+                      <div class="social">
+                        <a href="https://www.instagram.com/baguspurnawira" target="_blank"><i class="fa fa-instagram"></i></a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+           </div>
+              
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="member">
+                <img src="img/clients/team/1.png" class="img-fluid" alt="">
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>Amri Ilham Aziz</h4>
+                    <span>Research and Development</span>
+                    <div class="social">
+                      <a href="https://www.instagram.com/amriori19" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="member">
+                  <img src="img/clients/team/10.png" class="img-fluid" alt="">
+                  <div class="member-info">
+                    <div class="member-info-content">
+                      <h4>Anita Puspitasari</h4>
+                      <span>Information Technology</span>
+                      <div class="social">
+                        <a href="https://www.instagram.com/nitanitapsari" target="_blank"><i class="fa fa-instagram"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="member">
+                  <img src="img/clients/team/5.png" class="img-fluid" alt="">
+                  <div class="member-info">
+                    <div class="member-info-content">
+                      <h4>Hanifa</h4>
+                      <span>Administration</span>
+                      <div class="social">
+                        <a href="https://www.instagram.com/nhanifah1" target="_blank"><i class="fa fa-instagram"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="img/clients/team/bapak.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Basuki</h4>
+                  <span>Chief Operating & Product Officer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Kritik_Saran Section
+    ============================-->
+    <section id="kritik_saran" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Kritik & Saran</h3>
+          <p>Kami akan selalu mendengar dan akan sangat senang untuk menerima kritik, saran serta masukan.</p>
+        </div>
+
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div><br>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+   </div>
+
+    </section><!-- #kritik_saran -->
+  
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Kontak</h3>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <p><a href=" https://www.google.com/maps/place/Purworejo,+Wonogiri,+Wonogiri+Regency,+Central+Java/@-7.8232149,110.9411802,15z/data=!3m1!4b1!4m5!3m4!1s0x2e7a2e5f520e0abf:0x5027a76e356a4e0!8m2!3d-7.824992!4d110.959605" target="_blank">Desa Purworejo, Wonogiri, Jawa Tengah</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <p><a href="https://api.whatsapp.com/send?phone=62895329075070" target="_blank">0895-3290-75070</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <p><a href="mailto:customer@pustoc.com" target="_blank">customer@pustoc.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+  
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <center><div class="social-links">
+            <a href="http://www.instagram.com/pustocfertilizer" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCznMTzaDmIL2dyvpRHpxY3g/featured" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+          </div>        
+          <div class="container">
+              <div class="copyright">
+                Copyright &copy; 2019 <strong>Pustoc</strong>. All Rights Reserved
+              </div>
+              <div class="credits">        
+                Designed by <a href="https://www.pustoc.com/">Pustoc IT Team</a>
+              </div>
+            </div>
+          </center>                      
+          </div>
+        </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+
+<script>!function(){for(var t=document.getElementsByClassName("onq-youtube-player"),e=0;e<t.length;e++)t[e].onclick=function(){var t=document.createElement("iframe"),e="true"==this.dataset.ssv?"1":"0",s="true"==this.dataset.spc?"1":"0",i="true"==this.dataset.sta?"1":"0",a="true"==this.dataset.dkc?"1":"0",r="true"==this.dataset.ecc?"1":"0",o="true"==this.dataset.eap?"1":"0";for(t.setAttribute("src","//www.youtube.com/embed/"+this.dataset.id+"?rel="+e+"&controls="+s+"&showinfo="+i+"&disablekb="+a+"&cc_load_policy="+r+"&autoplay="+o),t.setAttribute("frameborder","0"),t.setAttribute("id","youtube-iframe"),t.setAttribute("style","width: 100%; height: 100%; position: absolute; top: 0; left: 0;"),"true"==this.dataset.afs&&t.setAttribute("allowfullscreen","");this.firstChild;)this.removeChild(this.firstChild);this.appendChild(t)}}();</script>
+<script>!function(){for(var t=document.getElementsByClassName("onq-youtube-player"),e=0;e<t.length;e++)t[e].onclick=function(){var t=document.createElement("iframe"),e="true"==this.dataset.ssv?"1":"0",s="true"==this.dataset.spc?"1":"0",i="true"==this.dataset.sta?"1":"0",a="true"==this.dataset.dkc?"1":"0",r="true"==this.dataset.ecc?"1":"0",o="true"==this.dataset.eap?"1":"0";for(t.setAttribute("src","//www.youtube.com/embed/"+this.dataset.id+"?rel="+e+"&controls="+s+"&showinfo="+i+"&disablekb="+a+"&cc_load_policy="+r+"&autoplay="+o),t.setAttribute("frameborder","0"),t.setAttribute("id","youtube-iframe"),t.setAttribute("style","width: 100%; height: 100%; position: absolute; top: 0; left: 0;"),"true"==this.dataset.afs&&t.setAttribute("allowfullscreen","");this.firstChild;)this.removeChild(this.firstChild);this.appendChild(t)}}();</script>
+
+</body>
+</html>
